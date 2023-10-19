@@ -1,0 +1,225 @@
+Database loaded:     1.42s (metadata 607.26ms; build 363.37ms)
+  crates: 1, mods: 1, decls: 4, fns: 2
+Item Collection:     4.57s
+0/2 0% processing: barSolving trait goal Canonical { value: InEnvironment { environment: Env([for<> FromEnv(!0_0: TraitId(285)), for<> FromEnv(!0_0: TraitId(27))]), goal: Implemented(0<[]>: TraitId(77)<0<[]>>) }, binders: [] }
+┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([for<> FromEnv(!0_0: Bar), for<> FromEnv(!0_0: Sized)]), goal: Implemented(0<[]>: CoerceUnsized<0<[]>>) }, binders: [] }, universes: 1 }
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([for<> FromEnv(!0_0: Bar), for<> FromEnv(!0_0: Sized)]), goal: FromEnv(0<[]>: CoerceUnsized<0<[]>>) }, binders: [] }, universes: 1 }
+│ ├─┐insert goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([for<> FromEnv(!0_0: Bar), for<> FromEnv(!0_0: Sized)]), goal: FromEnv(0<[]>: CoerceUnsized<0<[]>>) }, binders: [] }, universes: 1 }, result=Err(NoSolution)
+│ ├─┘
+[INFO chalk_recursive::fixed_point] solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([for<> FromEnv(!0_0: Bar), for<> FromEnv(!0_0: Sized)]), goal: Implemented(0<[]>: CoerceUnsized<0<[]>>) }, binders: [] }, universes: 1 }}: solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([for<> FromEnv(!0_0: Bar), for<> FromEnv(!0_0: Sized)]), goal: FromEnv(0<[]>: CoerceUnsized<0<[]>>) }, binders: [] }, universes: 1 }}: solve_goal: solution = Err(NoSolution)
+│ ├─0ms INFO solve_goal: solution = Err(NoSolution)
+├─┘
+├─┐insert goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([for<> FromEnv(!0_0: Bar), for<> FromEnv(!0_0: Sized)]), goal: Implemented(0<[]>: CoerceUnsized<0<[]>>) }, binders: [] }, universes: 1 }, result=Err(NoSolution)
+├─┘
+[INFO chalk_recursive::fixed_point] solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([for<> FromEnv(!0_0: Bar), for<> FromEnv(!0_0: Sized)]), goal: Implemented(0<[]>: CoerceUnsized<0<[]>>) }, binders: [] }, universes: 1 }}: solve_goal: solution = Err(NoSolution)
+├─318ms INFO solve_goal: solution = Err(NoSolution)
+┘
+1/2 50% processing: barmainSolving trait goal Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: TraitId(285)) }, binders: [U0 with kind type] }
+┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Bar) }, binders: [U0 with kind type] }, universes: 1 }
+├─┐insert goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Bar) }, binders: [U0 with kind type] }, universes: 1 }, result=Ok(Ambig(Unknown))
+├─┘
+[INFO chalk_recursive::fixed_point] solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Bar) }, binders: [U0 with kind type] }, universes: 1 }}: solve_goal: solution = Ok(Ambig(Unknown))
+├─0ms INFO solve_goal: solution = Ok(Ambig(Unknown))
+┘
+Solving trait goal Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: TraitId(27)) }, binders: [U0 with kind type] }
+┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind type] }, universes: 1 }
+├─┐insert goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind type] }, universes: 1 }, result=Ok(Ambig(Unknown))
+├─┘
+[INFO chalk_recursive::fixed_point] solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind type] }, universes: 1 }}: solve_goal: solution = Ok(Ambig(Unknown))
+├─0ms INFO solve_goal: solution = Ok(Ambig(Unknown))
+┘
+Solving trait goal Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: TraitId(285)) }, binders: [U0 with kind integer type] }
+┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Bar) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: FromEnv(^0.0: Bar) }, binders: [U0 with kind integer type] }, universes: 1 }
+│ ├─┐insert goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: FromEnv(^0.0: Bar) }, binders: [U0 with kind integer type] }, universes: 1 }, result=Err(NoSolution)
+│ ├─┘
+[INFO chalk_recursive::fixed_point] solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Bar) }, binders: [U0 with kind integer type] }, universes: 1 }}: solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: FromEnv(^0.0: Bar) }, binders: [U0 with kind integer type] }, universes: 1 }}: solve_goal: solution = Err(NoSolution)
+│ ├─0ms INFO solve_goal: solution = Err(NoSolution)
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+│ ├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: FromEnv(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+│ │ ├─┐insert goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: FromEnv(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }, result=Err(NoSolution)
+│ │ ├─┘
+[INFO chalk_recursive::fixed_point] solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Bar) }, binders: [U0 with kind integer type] }, universes: 1 }}: solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }}: solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: FromEnv(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }}: solve_goal: solution = Err(NoSolution)
+│ │ ├─0ms INFO solve_goal: solution = Err(NoSolution)
+│ ├─┘
+│ ├─┐insert goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }, result=Ok(Unique(Canonical { value: ConstrainedSubst { subst: [?0 := ^0.0], constraints: [] }, binders: [U0 with kind integer type] }))
+│ ├─┘
+[INFO chalk_recursive::fixed_point] solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Bar) }, binders: [U0 with kind integer type] }, universes: 1 }}: solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }}: solve_goal: solution = Ok(Unique(Canonical { value: ConstrainedSubst { subst: [?0 := ^0.0], constraints: [] }, binders: [U0 with kind integer type] }))
+│ ├─0ms INFO solve_goal: solution = Ok(Unique(Canonical { value: ConstrainedSubst { subst: [?0 := ^0.0], constraints: [] }, binders: [U0 with kind integer type] }))
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+│ ├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: FromEnv(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+│ │ ├─┐insert goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: FromEnv(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }, result=Err(NoSolution)
+│ │ ├─┘
+[INFO chalk_recursive::fixed_point] solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Bar) }, binders: [U0 with kind integer type] }, universes: 1 }}: solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }}: solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: FromEnv(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }}: solve_goal: solution = Err(NoSolution)
+│ │ ├─0ms INFO solve_goal: solution = Err(NoSolution)
+│ ├─┘
+│ ├─┐insert goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }, result=Err(NoSolution)
+│ ├─┘
+[INFO chalk_recursive::fixed_point] solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Bar) }, binders: [U0 with kind integer type] }, universes: 1 }}: solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }}: solve_goal: solution = Err(NoSolution)
+│ ├─0ms INFO solve_goal: solution = Err(NoSolution)
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Foo) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┘
+├─┐insert goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Bar) }, binders: [U0 with kind integer type] }, universes: 1 }, result=Err(NoSolution)
+├─┘
+[INFO chalk_recursive::fixed_point] solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Bar) }, binders: [U0 with kind integer type] }, universes: 1 }}: solve_goal: solution = Err(NoSolution)
+├─1ms INFO solve_goal: solution = Err(NoSolution)
+┘
+Solving trait goal Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: TraitId(27)) }, binders: [U0 with kind integer type] }
+┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: FromEnv(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }
+│ ├─┐insert goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: FromEnv(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }, result=Err(NoSolution)
+│ ├─┘
+[INFO chalk_recursive::fixed_point] solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }}: solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: FromEnv(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }}: solve_goal: solution = Err(NoSolution)
+│ ├─0ms INFO solve_goal: solution = Err(NoSolution)
+├─┘
+├─┐insert goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }, result=Ok(Unique(Canonical { value: ConstrainedSubst { subst: [?0 := ^0.0], constraints: [] }, binders: [U0 with kind integer type] }))
+├─┘
+[INFO chalk_recursive::fixed_point] solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(^0.0: Sized) }, binders: [U0 with kind integer type] }, universes: 1 }}: solve_goal: solution = Ok(Unique(Canonical { value: ConstrainedSubst { subst: [?0 := ^0.0], constraints: [] }, binders: [U0 with kind integer type] }))
+├─0ms INFO solve_goal: solution = Ok(Unique(Canonical { value: ConstrainedSubst { subst: [?0 := ^0.0], constraints: [] }, binders: [U0 with kind integer type] }))
+┘
+Solving trait goal Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(0<[]>: TraitId(77)<0<[]>>) }, binders: [] }
+┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(0<[]>: CoerceUnsized<0<[]>>) }, binders: [] }, universes: 1 }
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: FromEnv(0<[]>: CoerceUnsized<0<[]>>) }, binders: [] }, universes: 1 }
+│ ├─┐insert goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: FromEnv(0<[]>: CoerceUnsized<0<[]>>) }, binders: [] }, universes: 1 }, result=Err(NoSolution)
+│ ├─┘
+[INFO chalk_recursive::fixed_point] solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(0<[]>: CoerceUnsized<0<[]>>) }, binders: [] }, universes: 1 }}: solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: FromEnv(0<[]>: CoerceUnsized<0<[]>>) }, binders: [] }, universes: 1 }}: solve_goal: solution = Err(NoSolution)
+│ ├─0ms INFO solve_goal: solution = Err(NoSolution)
+├─┘
+├─┐insert goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(0<[]>: CoerceUnsized<0<[]>>) }, binders: [] }, universes: 1 }, result=Err(NoSolution)
+├─┘
+[INFO chalk_recursive::fixed_point] solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(0<[]>: CoerceUnsized<0<[]>>) }, binders: [] }, universes: 1 }}: solve_goal: solution = Err(NoSolution)
+├─0ms INFO solve_goal: solution = Err(NoSolution)
+┘
+2/2 100% processing: main                           exprs: 5, ??ty: 0 (0%), ?ty: 0 (0%), !ty: 0
+  pats: 1, ??ty: 0 (0%), ?ty: 0 (0%), !ty: 0
+Inference:           2.05s
+Solving trait goal Canonical { value: InEnvironment { environment: Env([for<> FromEnv(!0_0: TraitId(285)), for<> FromEnv(!0_0: TraitId(27))]), goal: Implemented(!0_0: TraitId(31)) }, binders: [] }
+┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([for<> FromEnv(!0_0: Bar), for<> FromEnv(!0_0: Sized)]), goal: Implemented(!0_0: Copy) }, binders: [] }, universes: 1 }
+├─┐add_copy_program_clauses trait_ref=!0_0 as Copy, ty=!0_0, binders=[]
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([for<> FromEnv(!0_0: Bar), for<> FromEnv(!0_0: Sized)]), goal: FromEnv(!0_0: Copy) }, binders: [] }, universes: 1 }
+│ ├─┐insert goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([for<> FromEnv(!0_0: Bar), for<> FromEnv(!0_0: Sized)]), goal: FromEnv(!0_0: Copy) }, binders: [] }, universes: 1 }, result=Err(NoSolution)
+│ ├─┘
+[INFO chalk_recursive::fixed_point] solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([for<> FromEnv(!0_0: Bar), for<> FromEnv(!0_0: Sized)]), goal: Implemented(!0_0: Copy) }, binders: [] }, universes: 1 }}: solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([for<> FromEnv(!0_0: Bar), for<> FromEnv(!0_0: Sized)]), goal: FromEnv(!0_0: Copy) }, binders: [] }, universes: 1 }}: solve_goal: solution = Err(NoSolution)
+│ ├─0ms INFO solve_goal: solution = Err(NoSolution)
+├─┘
+├─┐insert goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([for<> FromEnv(!0_0: Bar), for<> FromEnv(!0_0: Sized)]), goal: Implemented(!0_0: Copy) }, binders: [] }, universes: 1 }, result=Err(NoSolution)
+├─┘
+[INFO chalk_recursive::fixed_point] solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([for<> FromEnv(!0_0: Bar), for<> FromEnv(!0_0: Sized)]), goal: Implemented(!0_0: Copy) }, binders: [] }, universes: 1 }}: solve_goal: solution = Err(NoSolution)
+├─2ms INFO solve_goal: solution = Err(NoSolution)
+┘
+Solving trait goal Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(0<[]>: TraitId(31)) }, binders: [] }
+┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(0<[]>: Copy) }, binders: [] }, universes: 1 }
+├─┐add_copy_program_clauses trait_ref=0<[]> as Copy, ty=0<[]>, binders=[]
+├─┘
+├─┐solve_goal goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: FromEnv(0<[]>: Copy) }, binders: [] }, universes: 1 }
+│ ├─┐insert goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: FromEnv(0<[]>: Copy) }, binders: [] }, universes: 1 }, result=Err(NoSolution)
+│ ├─┘
+[INFO chalk_recursive::fixed_point] solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(0<[]>: Copy) }, binders: [] }, universes: 1 }}: solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: FromEnv(0<[]>: Copy) }, binders: [] }, universes: 1 }}: solve_goal: solution = Err(NoSolution)
+│ ├─0ms INFO solve_goal: solution = Err(NoSolution)
+├─┘
+├─┐insert goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(0<[]>: Copy) }, binders: [] }, universes: 1 }, result=Ok(Unique(Canonical { value: ConstrainedSubst { subst: [], constraints: [] }, binders: [] }))
+├─┘
+[INFO chalk_recursive::fixed_point] solve_goal{goal=UCanonical { canonical: Canonical { value: InEnvironment { environment: Env([]), goal: Implemented(0<[]>: Copy) }, binders: [] }, universes: 1 }}: solve_goal: solution = Ok(Unique(Canonical { value: ConstrainedSubst { subst: [], constraints: [] }, binders: [] }))
+├─0ms INFO solve_goal: solution = Ok(Unique(Canonical { value: ConstrainedSubst { subst: [], constraints: [] }, binders: [] }))
+┘
+MIR lowering:        4.24ms
+Mir failed bodies: 0 (0%)
+Data layouts:        114.00ns
+Failed data layouts: 0 (100%)
+Const evaluation:    221.00ns
+Failed const evals: 0 (100%)
+Total:               6.64s

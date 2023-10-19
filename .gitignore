@@ -1,2 +1,4 @@
 test_cases/target
+argus_examples/**/.DS_Store
+argus_examples/**/target
 .env
