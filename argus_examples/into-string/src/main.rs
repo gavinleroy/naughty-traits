@@ -1,9 +1,9 @@
 use traits::IntoString;
 
-fn invoke_trait_bound<T: IntoString>(v: T) {}
+fn is_into_string_huh<T: IntoString>(v: T) {}
 
-fn test(v: Vec<(i32, i32)>) {
-    invoke_trait_bound(v);
+fn test(v: Vec<(i32, f32)>) {
+    is_into_string_huh(v);
 }
 
 fn main() {}
@@ -19,7 +19,7 @@ mod traits {
     //   (i32, i32): IntoString.
     impl IntoString for (i32, i32) {
         fn to_string(&self) -> String {
-            /*  */
+            String::from("(...)")
         }
     }
 
@@ -27,7 +27,7 @@ mod traits {
     //   Vec<T>: IntoString :- T: IntoString.
     impl<T: IntoString> IntoString for Vec<T> {
         fn to_string(&self) -> String {
-            /* */
+            String::from("Vec<T>")
         }
     }
 }

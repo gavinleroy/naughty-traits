@@ -30,3 +30,5 @@ fn test() {
     require_bound::<MyVisitor>();
     // MyVisitor {}.visit(&Ast::Null)
 }
+
+fn main() {}
